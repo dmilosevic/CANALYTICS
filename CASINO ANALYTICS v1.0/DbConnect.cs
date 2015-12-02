@@ -16,7 +16,7 @@ namespace CASINO_ANALYTICS_v1._0
         private string username;
         private string password;
         private string connectionString;
-
+        //DODAT KOMENTAR
 
         public DbConnect()
         {
