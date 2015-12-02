@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace CASINO_ANALYTICS_v1._0
 {
+    //komentar na dbconnectu
     class DbConnect
     {
         private MySqlConnection connection;
