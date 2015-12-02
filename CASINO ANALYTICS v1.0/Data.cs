@@ -18,6 +18,7 @@ namespace CASINO_ANALYTICS_v1._0
         public double result;
         public int headcount;
 
+        //probaproba
         public Data(string user, string tablename, int year, int month, int day, int fromH, int toH, double drop, double result, int headcount)
         {
             this.user = user;
