@@ -23,23 +23,37 @@ namespace CASINO_ANALYTICS_v1._0
         List<Data> list; //holding all of the data form database table 'data'
         List<Data> results; //pretty straightforward xexe
 
-        private List<Data> getStatsForYear(string table, int year)
+        private List<Data> getStatsForYear(string table, int year) //UKUPNO I PROSECNO ZA TU GODINU
         {
             List<Data> ret = new List<Data>();
             double totalDrop = 0;
             double totalResult = 0;
             double totalHC = 0;
+
+            int kolikoIhJe = 0;
+
+            double avgDrop = 0;
+            double avgResult = 0;
+            double avgHc = 0;
 
             foreach (Data item in list)
             {
                 if (item.tableName == table && item.year == year)
                 {
+                    kolikoIhJe++;
                     totalDrop += item.drop;
                     totalResult += item.result;
                     totalHC += item.headcount;
                     ret.Add(item);
                 }
             }
+            avgDrop = totalDrop / kolikoIhJe;
+            avgResult = totalResult / kolikoIhJe;
+            avgHc = totalHC / kolikoIhJe;
+
+            tbAvgDropSelected.Text = avgDrop.ToString();
+            tbAvgResultSelected.Text = avgResult.ToString();
+            tbAvgHcSelected.Text = avgHc.ToString();
 
             totalDropSelected.Text = totalDrop.ToString();
             totalResultSelected.Text = totalResult.ToString();
@@ -49,23 +63,38 @@ namespace CASINO_ANALYTICS_v1._0
 
         }
 
-        private List<Data> getStatsForMonth(string table, int year, int month)
+        private List<Data> getStatsForMonth(string table, int year, int month) //UKUPNO I PROSECNO ZA TAJ MESEC
         {
             List<Data> ret = new List<Data>();
             double totalDrop = 0;
             double totalResult = 0;
             double totalHC = 0;
+
+            int kolikoIhJe = 0;
+
+            double avgDrop = 0;
+            double avgResult = 0;
+            double avgHc = 0;
 
             foreach (Data item in list)
             {
                 if (item.tableName == table && item.year == year && item.month == month)
                 {
+                    kolikoIhJe++;
                     totalDrop += item.drop;
                     totalResult += item.result;
                     totalHC += item.headcount;
                     ret.Add(item);
                 }
             }
+
+            avgDrop = totalDrop / kolikoIhJe;
+            avgResult = totalResult / kolikoIhJe;
+            avgHc = totalHC / kolikoIhJe;
+
+            tbAvgDropSelected.Text = avgDrop.ToString();
+            tbAvgResultSelected.Text = avgResult.ToString();
+            tbAvgHcSelected.Text = avgHc.ToString();
 
             totalDropSelected.Text = totalDrop.ToString();
             totalResultSelected.Text = totalResult.ToString();
@@ -75,23 +104,37 @@ namespace CASINO_ANALYTICS_v1._0
 
         }
 
-        private List<Data> getStatsForDay(string table, int year, int month, int day)
+        private List<Data> getStatsForDay(string table, int year, int month, int day) //UKUPNO I PROSECNO ZA TAJ DAN
         {
             List<Data> ret = new List<Data>();
             double totalDrop = 0;
             double totalResult = 0;
             double totalHC = 0;
 
+            int kolikoIhJe = 0;
+
+            double avgDrop = 0;
+            double avgResult = 0;
+            double avgHc = 0;
+
             foreach (Data item in list)
             {
                 if (item.tableName == table && item.year == year && item.month == month && item.day == day)
                 {
+                    kolikoIhJe++;
                     totalDrop += item.drop;
                     totalResult += item.result;
                     totalHC += item.headcount;
                     ret.Add(item);
                 }
             }
+            avgDrop = totalDrop / kolikoIhJe;
+            avgResult = totalResult / kolikoIhJe;
+            avgHc = totalHC / kolikoIhJe;
+
+            tbAvgDropSelected.Text = avgDrop.ToString();
+            tbAvgResultSelected.Text = avgResult.ToString();
+            tbAvgHcSelected.Text = avgHc.ToString();
 
             totalDropSelected.Text = totalDrop.ToString();
             totalResultSelected.Text = totalResult.ToString();
@@ -225,6 +268,13 @@ namespace CASINO_ANALYTICS_v1._0
             double totalDrop = 0;
             double totalResult = 0;
             double totalHC = 0;
+
+            int kolikoIhJe = 0;
+
+            double avgDrop = 0;
+            double avgResult = 0;
+            double avgHc = 0;
+
             string tbName = lbTables.SelectedItem.ToString();
             lblTableName.Text = tbName;
             //daily checked
@@ -244,7 +294,7 @@ namespace CASINO_ANALYTICS_v1._0
                 }
                 yearYear = Int32.Parse(tbYearAnnual.Text);
 
-               results = getStatsForYear(tbName,yearYear);
+               results = getStatsForYear(tbName,yearYear); //DONJI BOXOVI ZA GODINU
             }
 
             else if (rbMonthly.Checked)
@@ -257,7 +307,7 @@ namespace CASINO_ANALYTICS_v1._0
                 monthMonth = Int32.Parse(cbMonthMonthly.Text);
                 yearMonth = Int32.Parse(tbYearMonthly.Text);
 
-                results = getStatsForMonth(tbName, yearMonth, monthMonth);
+                results = getStatsForMonth(tbName, yearMonth, monthMonth); //DONJI BOXOVI ZA MESEC
             }
             else if (rbDaily.Checked)
             {
@@ -270,15 +320,8 @@ namespace CASINO_ANALYTICS_v1._0
                 monthDay = Int32.Parse(cbMonthDaily.Text);
                 yearDay = Int32.Parse(tbYearDaily.Text);
 
-               results = getStatsForDay(tbName, yearDay, monthDay, dayDay);
+               results = getStatsForDay(tbName, yearDay, monthDay, dayDay); //DONJI BOXOVI ZA DAN
             }
-            #endregion
-
-
-            
-            
-            #region overall for selected day/month/year table
-                
             #endregion
 
             #region overall for table
@@ -287,34 +330,23 @@ namespace CASINO_ANALYTICS_v1._0
             {
                 if (d.tableName == tbName)
                 {
+                    kolikoIhJe++;
                     totalDrop += d.drop;
                     totalResult += d.result;
                     totalHC += d.headcount;
                 }
             }
+            avgDrop = totalDrop / kolikoIhJe;
+            avgResult = totalResult / kolikoIhJe;
+            avgHc = totalHC / kolikoIhJe;
+
+            tbAvgDrop.Text = avgDrop.ToString();
+            tbAvgResult.Text = avgResult.ToString();
+            tbAvgHc.Text = avgHc.ToString();
+
             tbTotalDrop.Text = totalDrop.ToString();
             tbTotalHeadcount.Text = totalHC.ToString();
             tbTotalResult.Text = totalResult.ToString();
-            #endregion
-
-            #region overall for all tables
-
-            totalDrop = 0;
-            totalResult = 0;
-            totalHC = 0;
-
-            foreach (Data d in list)
-            {
-                totalDrop += d.drop;
-                totalResult += d.result;
-                totalHC += d.headcount;
-            }
-            textBox3.Text = totalDrop.ToString();
-            textBox1.Text = totalHC.ToString();
-            textBox2.Text = totalResult.ToString();
-
-
-
             #endregion
 
             //do magic
