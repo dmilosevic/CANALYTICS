@@ -92,7 +92,11 @@ namespace CASINO_ANALYTICS_v1._0
 
             //average
             if (count == 0)
-                return;
+            {
+                tbAvgDrop.Text = "0";
+                tbAvgResult.Text = "0";
+                tbAvgHc.Text = "0";
+            }
             tbAvgDrop.Text = (totalDrop / count).ToString();
             tbAvgResult.Text = (totalResult / count).ToString();
             tbAvgHc.Text = (totalHc / count).ToString();
