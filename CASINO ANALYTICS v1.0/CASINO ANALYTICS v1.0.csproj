@@ -83,6 +83,12 @@
     <Compile Include="frmEnterCheck.Designer.cs">
       <DependentUpon>frmEnterCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGraphStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGraphStatistics.Designer.cs">
+      <DependentUpon>frmGraphStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHourlyStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnterCheck.resx">
       <DependentUpon>frmEnterCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGraphStatistics.resx">
+      <DependentUpon>frmGraphStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHourlyStats.resx">
       <DependentUpon>frmHourlyStats.cs</DependentUpon>
