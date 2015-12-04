@@ -58,7 +58,6 @@
             this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Headcount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblTableName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSavetotxtSpec = new System.Windows.Forms.Button();
@@ -104,6 +103,8 @@
             this.tbAvgResult = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.tbAvgDrop = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -112,6 +113,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.lblDataInfoData);
             this.panel1.Controls.Add(this.lblDataInfoTables);
             this.panel1.Controls.Add(this.lblDataInfoUsers);
@@ -430,19 +432,6 @@
             // 
             this.User.HeaderText = "User";
             this.User.Name = "User";
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_left225;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(21, 472);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(252, 40);
-            this.button1.TabIndex = 59;
-            this.button1.Text = "Show Statistics";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTableName
             // 
@@ -925,6 +914,30 @@
             this.tbAvgDrop.Size = new System.Drawing.Size(137, 22);
             this.tbAvgDrop.TabIndex = 25;
             // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_left225;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(21, 472);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(252, 40);
+            this.button1.TabIndex = 59;
+            this.button1.Text = "Show Statistics";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(744, 518);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 23);
+            this.button2.TabIndex = 71;
+            this.button2.Text = "Show graph";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmStatistics
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1024,5 +1037,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button2;
     }
 }
