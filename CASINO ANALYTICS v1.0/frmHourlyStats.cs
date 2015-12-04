@@ -50,7 +50,7 @@ namespace CASINO_ANALYTICS_v1._0
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             
-            if (string.IsNullOrEmpty(tbFromH.Text) || string.IsNullOrEmpty(tbToH.Text))
+            if (string.IsNullOrEmpty(tbFromH.Text) || string.IsNullOrEmpty(tbToH.Text) || cbDay.Text.Equals("All days"))
             {
                 MessageBox.Show("Please enter all the values needed.","Information");
                 return;
@@ -59,7 +59,6 @@ namespace CASINO_ANALYTICS_v1._0
             for(int i=0; i<lbTables.CheckedItems.Count; i++)
             {
                 tableArray[i] = lbTables.CheckedItems[i].ToString();
-                MessageBox.Show(tableArray[i]);
             }
 
             string day = cbDay.Text;
@@ -92,7 +91,11 @@ namespace CASINO_ANALYTICS_v1._0
 
             //average
             if (count == 0)
-                return;
+            {
+                tbAvgDrop.Text = "0";
+                tbAvgResult.Text = "0";
+                tbAvgHc.Text = "0";
+            }
             tbAvgDrop.Text = (totalDrop / count).ToString();
             tbAvgResult.Text = (totalResult / count).ToString();
             tbAvgHc.Text = (totalHc / count).ToString();
