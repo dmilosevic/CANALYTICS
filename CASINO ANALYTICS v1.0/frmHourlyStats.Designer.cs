@@ -243,7 +243,7 @@
             // 
             this.tbTotalDrop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTotalDrop.Enabled = false;
-            this.tbTotalDrop.Location = new System.Drawing.Point(420, 133);
+            this.tbTotalDrop.Location = new System.Drawing.Point(464, 133);
             this.tbTotalDrop.Multiline = true;
             this.tbTotalDrop.Name = "tbTotalDrop";
             this.tbTotalDrop.Size = new System.Drawing.Size(135, 25);
@@ -253,7 +253,7 @@
             // 
             this.tbAvgDrop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbAvgDrop.Enabled = false;
-            this.tbAvgDrop.Location = new System.Drawing.Point(420, 177);
+            this.tbAvgDrop.Location = new System.Drawing.Point(464, 177);
             this.tbAvgDrop.Multiline = true;
             this.tbAvgDrop.Name = "tbAvgDrop";
             this.tbAvgDrop.Size = new System.Drawing.Size(135, 25);
@@ -263,7 +263,7 @@
             // 
             this.tbTotalResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTotalResult.Enabled = false;
-            this.tbTotalResult.Location = new System.Drawing.Point(420, 221);
+            this.tbTotalResult.Location = new System.Drawing.Point(464, 221);
             this.tbTotalResult.Multiline = true;
             this.tbTotalResult.Name = "tbTotalResult";
             this.tbTotalResult.Size = new System.Drawing.Size(135, 25);
@@ -273,7 +273,7 @@
             // 
             this.tbAvgResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbAvgResult.Enabled = false;
-            this.tbAvgResult.Location = new System.Drawing.Point(420, 265);
+            this.tbAvgResult.Location = new System.Drawing.Point(464, 265);
             this.tbAvgResult.Multiline = true;
             this.tbAvgResult.Name = "tbAvgResult";
             this.tbAvgResult.Size = new System.Drawing.Size(135, 25);
@@ -283,7 +283,7 @@
             // 
             this.tbTotalHc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTotalHc.Enabled = false;
-            this.tbTotalHc.Location = new System.Drawing.Point(420, 311);
+            this.tbTotalHc.Location = new System.Drawing.Point(464, 311);
             this.tbTotalHc.Multiline = true;
             this.tbTotalHc.Name = "tbTotalHc";
             this.tbTotalHc.Size = new System.Drawing.Size(135, 25);
@@ -293,7 +293,7 @@
             // 
             this.tbAvgHc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbAvgHc.Enabled = false;
-            this.tbAvgHc.Location = new System.Drawing.Point(420, 353);
+            this.tbAvgHc.Location = new System.Drawing.Point(464, 353);
             this.tbAvgHc.Multiline = true;
             this.tbAvgHc.Name = "tbAvgHc";
             this.tbAvgHc.Size = new System.Drawing.Size(135, 25);
@@ -303,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 450);
+            this.ClientSize = new System.Drawing.Size(611, 450);
             this.Controls.Add(this.tbAvgHc);
             this.Controls.Add(this.tbTotalHc);
             this.Controls.Add(this.tbAvgResult);
@@ -329,8 +329,8 @@
             this.Controls.Add(this.lbTables);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaximumSize = new System.Drawing.Size(583, 488);
-            this.MinimumSize = new System.Drawing.Size(583, 488);
+            this.MaximumSize = new System.Drawing.Size(627, 488);
+            this.MinimumSize = new System.Drawing.Size(627, 488);
             this.Name = "frmHourlyStats";
             this.Text = "frmHourlyStats";
             this.Load += new System.EventHandler(this.frmHourlyStats_Load);

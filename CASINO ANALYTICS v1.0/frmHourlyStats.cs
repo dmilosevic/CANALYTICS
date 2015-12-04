@@ -50,7 +50,7 @@ namespace CASINO_ANALYTICS_v1._0
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             
-            if (string.IsNullOrEmpty(tbFromH.Text) || string.IsNullOrEmpty(tbToH.Text) || cbDay.Text.Equals("All days"))
+            if (string.IsNullOrEmpty(tbFromH.Text) || string.IsNullOrEmpty(tbToH.Text))
             {
                 MessageBox.Show("Please enter all the values needed.","Information");
                 return;
@@ -59,6 +59,7 @@ namespace CASINO_ANALYTICS_v1._0
             for(int i=0; i<lbTables.CheckedItems.Count; i++)
             {
                 tableArray[i] = lbTables.CheckedItems[i].ToString();
+                MessageBox.Show(tableArray[i]);
             }
 
             string day = cbDay.Text;
