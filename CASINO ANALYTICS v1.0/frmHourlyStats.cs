@@ -20,11 +20,13 @@ namespace CASINO_ANALYTICS_v1._0
         private void frmHourlyStats_Load(object sender, EventArgs e)
         {
             DbConnect conn = new DbConnect();
-            List<Table> listaStolova = new List<Table>();
+            List<Table> listaStolova = new List<Table>();            
 
             conn.openConnection();
             listaStolova = conn.selectTables();
             lbTables.Items.Clear();
+
+            tableArray = new string[listaStolova.Count];
 
             foreach (Table item in listaStolova)
             {
@@ -47,21 +49,53 @@ namespace CASINO_ANALYTICS_v1._0
         
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            /*
-            if (string.IsNullOrEmpty(tbFromH.Text) || string.IsNullOrEmpty(tbToH.Text))
+            
+            if (string.IsNullOrEmpty(tbFromH.Text) || string.IsNullOrEmpty(tbToH.Text) || cbDay.Text.Equals("All days"))
             {
                 MessageBox.Show("Please enter all the values needed.","Information");
                 return;
             }
-            for (int i = 0; i < lbTables.Items.Count; i++)
-			{
-                if (lbTables.GetItemChecked(i))
+            
+            for(int i=0; i<lbTables.CheckedItems.Count; i++)
+            {
+                tableArray[i] = lbTables.CheckedItems[i].ToString();
+            }
+
+            string day = cbDay.Text;
+            string past = cbPast.Text;
+            int from = int.Parse(tbFromH.Text);
+            int to = int.Parse(tbToH.Text);
+            int count = 0;
+            double totalDrop = 0;
+            double totalResult = 0;
+            int totalHc = 0;
+            foreach(Data d in dataList)
+            {
+                if (tableArray.Contains(d.tableName) && new DateTime(d.year, d.month, d.day).DayOfWeek.ToString() == day)
                 {
-                    tableArray[i] = lbTables.CheckedItems[i].ToString();
-                    MessageBox.Show(tableArray[i]);
+                    //correct table and day of the week, check time
+                    DateTime dtFrom = new DateTime(d.year, d.month, d.day, d.fromH, 0, 0);
+                    DateTime dtTo = new DateTime(d.year, d.month, d.day, d.toH, 0, 0);
+                    if (dtFrom.Hour >= from && dtTo.Hour <= to)
+                    {
+                        totalDrop += d.drop;
+                        totalResult += d.result;
+                        totalHc += d.headcount;
+                        count++;
+                    }
                 }
-			}
-            */
+            }
+            tbTotalDrop.Text = totalDrop.ToString();
+            tbTotalResult.Text = totalResult.ToString();
+            tbTotalHc.Text = totalHc.ToString();
+
+            //average
+            if (count == 0)
+                return;
+            tbAvgDrop.Text = (totalDrop / count).ToString();
+            tbAvgResult.Text = (totalResult / count).ToString();
+            tbAvgHc.Text = (totalHc / count).ToString();
+            
         }
     }
 }

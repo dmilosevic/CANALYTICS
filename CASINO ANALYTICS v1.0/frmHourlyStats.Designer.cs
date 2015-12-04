@@ -59,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 328);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 14);
+            this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Day:";
             // 
@@ -73,6 +73,7 @@
             // 
             // cbDay
             // 
+            this.cbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDay.FormattingEnabled = true;
             this.cbDay.Items.AddRange(new object[] {
             "All days",
@@ -85,11 +86,12 @@
             "Sunday"});
             this.cbDay.Location = new System.Drawing.Point(45, 322);
             this.cbDay.Name = "cbDay";
-            this.cbDay.Size = new System.Drawing.Size(155, 22);
+            this.cbDay.Size = new System.Drawing.Size(155, 23);
             this.cbDay.TabIndex = 3;
             // 
             // cbPast
             // 
+            this.cbPast.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPast.FormattingEnabled = true;
             this.cbPast.Items.AddRange(new object[] {
             "1 week",
@@ -99,7 +101,7 @@
             "2 months"});
             this.cbPast.Location = new System.Drawing.Point(45, 350);
             this.cbPast.Name = "cbPast";
-            this.cbPast.Size = new System.Drawing.Size(155, 22);
+            this.cbPast.Size = new System.Drawing.Size(155, 23);
             this.cbPast.TabIndex = 5;
             // 
             // label2
@@ -107,7 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(8, 355);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 14);
+            this.label2.Size = new System.Drawing.Size(34, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Past:";
             // 
@@ -116,7 +118,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 381);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 14);
+            this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "From H:";
             // 
@@ -141,7 +143,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(118, 381);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 14);
+            this.label4.Size = new System.Drawing.Size(36, 15);
             this.label4.TabIndex = 8;
             this.label4.Text = "To H:";
             // 
@@ -160,80 +162,80 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(180, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 24);
+            this.label5.Size = new System.Drawing.Size(243, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "HOURLY STATISTICS";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(297, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 24);
+            this.label6.Size = new System.Drawing.Size(192, 25);
             this.label6.TabIndex = 12;
             this.label6.Text = "IN THAT PERIOD";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(225, 133);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 24);
+            this.label7.Size = new System.Drawing.Size(163, 25);
             this.label7.TabIndex = 13;
             this.label7.Text = "TOTAL DROP:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(225, 177);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(171, 24);
+            this.label8.Size = new System.Drawing.Size(198, 25);
             this.label8.TabIndex = 14;
             this.label8.Text = "AVERAGE DROP:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(225, 221);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 24);
+            this.label9.Size = new System.Drawing.Size(188, 25);
             this.label9.TabIndex = 15;
             this.label9.Text = "TOTAL RESULT:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(225, 265);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(187, 24);
+            this.label10.Size = new System.Drawing.Size(223, 25);
             this.label10.TabIndex = 16;
             this.label10.Text = "AVERAGE RESULT:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(225, 309);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 24);
+            this.label11.Size = new System.Drawing.Size(138, 25);
             this.label11.TabIndex = 17;
             this.label11.Text = "TOTAL H/C:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Droid Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(225, 353);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(151, 24);
+            this.label12.Size = new System.Drawing.Size(173, 25);
             this.label12.TabIndex = 18;
             this.label12.Text = "AVERAGE H/C:";
             // 
@@ -299,7 +301,7 @@
             // 
             // frmHourlyStats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 450);
             this.Controls.Add(this.tbAvgHc);
@@ -326,7 +328,9 @@
             this.Controls.Add(this.cbDay);
             this.Controls.Add(this.lbTables);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Droid Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximumSize = new System.Drawing.Size(583, 488);
+            this.MinimumSize = new System.Drawing.Size(583, 488);
             this.Name = "frmHourlyStats";
             this.Text = "frmHourlyStats";
             this.Load += new System.EventHandler(this.frmHourlyStats_Load);
