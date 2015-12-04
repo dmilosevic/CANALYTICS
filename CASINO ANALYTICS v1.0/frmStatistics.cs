@@ -634,8 +634,8 @@ namespace CASINO_ANALYTICS_v1._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmGraphStatistics frmgraph = new frmGraphStatistics(lbTables.SelectedItem.ToString(),dmy,results);
-            frmgraph.ShowDialog();
+            //frmGraphStatistics frmgraph = new frmGraphStatistics(lbTables.SelectedItem.ToString(),dmy,results);
+           // frmgraph.ShowDialog();
         }
     }
 }
