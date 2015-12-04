@@ -25,8 +25,8 @@ namespace CASINO_ANALYTICS_v1._0
                 return;
 
             DbConnect conn = new DbConnect();
-
             Table tbl = new Table(textBox1.Text);
+            
 
             if (conn.doesExist(tbl))
             {

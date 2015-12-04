@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 501);
+            this.ClientSize = new System.Drawing.Size(782, 501);
             this.Name = "frmGraphStatistics";
             this.Text = "frmGraphStatistics";
             this.Load += new System.EventHandler(this.frmGraphStatistics_Load);

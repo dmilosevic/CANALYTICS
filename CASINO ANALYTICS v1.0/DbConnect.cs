@@ -128,9 +128,12 @@ namespace CASINO_ANALYTICS_v1._0
 
         public void editTable(Table tbl, string oldName)
         {
-            string query = string.Format("UPDATE tables SET TableName='{0}' WHERE TableName='{1}'", tbl.getTableName(), oldName);
-            MySqlCommand cmd = new MySqlCommand(query, connection);
-            cmd.ExecuteNonQuery();
+            string query1 = string.Format("UPDATE tables SET TableName='{0}' WHERE TableName='{1}'", tbl.getTableName(), oldName);
+            string query2 = string.Format("UPDATE data SET TableName='{0}' WHERE TableName='{1}'", tbl.getTableName(), oldName);
+            MySqlCommand cmd1 = new MySqlCommand(query1, connection);
+            MySqlCommand cmd2 = new MySqlCommand(query2, connection);
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
         }
 
         public void deleteTable(Table tbl)
