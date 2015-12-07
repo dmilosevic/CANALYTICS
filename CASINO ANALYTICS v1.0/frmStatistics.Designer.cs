@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStatistics));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblDataInfoData = new System.Windows.Forms.Label();
             this.lblDataInfoTables = new System.Windows.Forms.Label();
             this.lblDataInfoUsers = new System.Windows.Forms.Label();
@@ -37,6 +39,15 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tbAvgHcSelected = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tbAvgResultSelected = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbAvgDropSelected = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.totalHeadcountSelected = new System.Windows.Forms.TextBox();
             this.totalResultSelected = new System.Windows.Forms.TextBox();
             this.totalDropSelected = new System.Windows.Forms.TextBox();
@@ -44,6 +55,18 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tbAvgHc = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tbAvgResult = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tbAvgDrop = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.tbTotalHeadcount = new System.Windows.Forms.TextBox();
             this.tbTotalResult = new System.Windows.Forms.TextBox();
             this.tbTotalDrop = new System.Windows.Forms.TextBox();
@@ -58,6 +81,7 @@
             this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Headcount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblTableName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnSavetotxtSpec = new System.Windows.Forms.Button();
@@ -82,29 +106,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tbAvgDropSelected = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tbAvgResultSelected = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.tbAvgHcSelected = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.tbAvgHc = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.tbAvgResult = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.tbAvgDrop = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -152,6 +153,19 @@
             this.panel1.Size = new System.Drawing.Size(1131, 749);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.ascendant6;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(744, 518);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 31);
+            this.button2.TabIndex = 71;
+            this.button2.Text = "Show graph";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblDataInfoData
             // 
@@ -247,6 +261,96 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Statistics for this day/month/year:";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(302, 111);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(76, 16);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "AVERAGE:";
+            // 
+            // tbAvgHcSelected
+            // 
+            this.tbAvgHcSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbAvgHcSelected.Enabled = false;
+            this.tbAvgHcSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAvgHcSelected.Location = new System.Drawing.Point(384, 109);
+            this.tbAvgHcSelected.Name = "tbAvgHcSelected";
+            this.tbAvgHcSelected.Size = new System.Drawing.Size(137, 22);
+            this.tbAvgHcSelected.TabIndex = 21;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(302, 77);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(76, 16);
+            this.label24.TabIndex = 20;
+            this.label24.Text = "AVERAGE:";
+            // 
+            // tbAvgResultSelected
+            // 
+            this.tbAvgResultSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbAvgResultSelected.Enabled = false;
+            this.tbAvgResultSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAvgResultSelected.Location = new System.Drawing.Point(384, 75);
+            this.tbAvgResultSelected.Name = "tbAvgResultSelected";
+            this.tbAvgResultSelected.Size = new System.Drawing.Size(137, 22);
+            this.tbAvgResultSelected.TabIndex = 19;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(88, 111);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(55, 16);
+            this.label23.TabIndex = 18;
+            this.label23.Text = "TOTAL:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(90, 77);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 16);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "TOTAL:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(302, 43);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 16);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "AVERAGE:";
+            // 
+            // tbAvgDropSelected
+            // 
+            this.tbAvgDropSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbAvgDropSelected.Enabled = false;
+            this.tbAvgDropSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAvgDropSelected.Location = new System.Drawing.Point(384, 41);
+            this.tbAvgDropSelected.Name = "tbAvgDropSelected";
+            this.tbAvgDropSelected.Size = new System.Drawing.Size(137, 22);
+            this.tbAvgDropSelected.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(90, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(55, 16);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "TOTAL:";
+            // 
             // totalHeadcountSelected
             // 
             this.totalHeadcountSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -330,6 +434,126 @@
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Overall statistics for selected table";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(299, 111);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(76, 16);
+            this.label29.TabIndex = 30;
+            this.label29.Text = "AVERAGE:";
+            // 
+            // tbAvgHc
+            // 
+            this.tbAvgHc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbAvgHc.Enabled = false;
+            this.tbAvgHc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAvgHc.Location = new System.Drawing.Point(381, 109);
+            this.tbAvgHc.Name = "tbAvgHc";
+            this.tbAvgHc.Size = new System.Drawing.Size(137, 22);
+            this.tbAvgHc.TabIndex = 29;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(299, 77);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(76, 16);
+            this.label30.TabIndex = 28;
+            this.label30.Text = "AVERAGE:";
+            // 
+            // tbAvgResult
+            // 
+            this.tbAvgResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbAvgResult.Enabled = false;
+            this.tbAvgResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAvgResult.Location = new System.Drawing.Point(381, 75);
+            this.tbAvgResult.Name = "tbAvgResult";
+            this.tbAvgResult.Size = new System.Drawing.Size(137, 22);
+            this.tbAvgResult.TabIndex = 27;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(299, 43);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(76, 16);
+            this.label31.TabIndex = 26;
+            this.label31.Text = "AVERAGE:";
+            // 
+            // tbAvgDrop
+            // 
+            this.tbAvgDrop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbAvgDrop.Enabled = false;
+            this.tbAvgDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAvgDrop.Location = new System.Drawing.Point(381, 41);
+            this.tbAvgDrop.Name = "tbAvgDrop";
+            this.tbAvgDrop.Size = new System.Drawing.Size(137, 22);
+            this.tbAvgDrop.TabIndex = 25;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(83, 111);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 16);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "TOTAL:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(85, 77);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 16);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "TOTAL:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(85, 43);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 16);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "TOTAL:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(6, 109);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(42, 18);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "H/C:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(6, 75);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(78, 18);
+            this.label27.TabIndex = 20;
+            this.label27.Text = "RESULT:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(6, 41);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(61, 18);
+            this.label28.TabIndex = 19;
+            this.label28.Text = "DROP:";
             // 
             // tbTotalHeadcount
             // 
@@ -433,6 +657,19 @@
             this.User.HeaderText = "User";
             this.User.Name = "User";
             // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_left225;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(21, 472);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(252, 40);
+            this.button1.TabIndex = 59;
+            this.button1.Text = "Show Statistics";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lblTableName
             // 
             this.lblTableName.AutoSize = true;
@@ -455,9 +692,11 @@
             // btnSavetotxtSpec
             // 
             this.btnSavetotxtSpec.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSavetotxtSpec.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.diskette31;
+            this.btnSavetotxtSpec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSavetotxtSpec.Location = new System.Drawing.Point(992, 518);
             this.btnSavetotxtSpec.Name = "btnSavetotxtSpec";
-            this.btnSavetotxtSpec.Size = new System.Drawing.Size(118, 23);
+            this.btnSavetotxtSpec.Size = new System.Drawing.Size(118, 31);
             this.btnSavetotxtSpec.TabIndex = 56;
             this.btnSavetotxtSpec.Text = "Save to .txt";
             this.btnSavetotxtSpec.UseVisualStyleBackColor = true;
@@ -466,9 +705,11 @@
             // btnPrintSpec
             // 
             this.btnPrintSpec.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintSpec.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.paper6;
+            this.btnPrintSpec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrintSpec.Location = new System.Drawing.Point(868, 518);
             this.btnPrintSpec.Name = "btnPrintSpec";
-            this.btnPrintSpec.Size = new System.Drawing.Size(118, 23);
+            this.btnPrintSpec.Size = new System.Drawing.Size(118, 31);
             this.btnPrintSpec.TabIndex = 55;
             this.btnPrintSpec.Text = "Print stats";
             this.btnPrintSpec.UseVisualStyleBackColor = true;
@@ -704,240 +945,6 @@
             this.printDocument1.BeginPrint += new System.Drawing.Printing.PrintEventHandler(this.printDocument1_BeginPrint);
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(90, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(55, 16);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "TOTAL:";
-            // 
-            // tbAvgDropSelected
-            // 
-            this.tbAvgDropSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbAvgDropSelected.Enabled = false;
-            this.tbAvgDropSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAvgDropSelected.Location = new System.Drawing.Point(384, 41);
-            this.tbAvgDropSelected.Name = "tbAvgDropSelected";
-            this.tbAvgDropSelected.Size = new System.Drawing.Size(137, 22);
-            this.tbAvgDropSelected.TabIndex = 15;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(302, 43);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 16);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "AVERAGE:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(90, 77);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(55, 16);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "TOTAL:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(88, 111);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(55, 16);
-            this.label23.TabIndex = 18;
-            this.label23.Text = "TOTAL:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(302, 77);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(76, 16);
-            this.label24.TabIndex = 20;
-            this.label24.Text = "AVERAGE:";
-            // 
-            // tbAvgResultSelected
-            // 
-            this.tbAvgResultSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbAvgResultSelected.Enabled = false;
-            this.tbAvgResultSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAvgResultSelected.Location = new System.Drawing.Point(384, 75);
-            this.tbAvgResultSelected.Name = "tbAvgResultSelected";
-            this.tbAvgResultSelected.Size = new System.Drawing.Size(137, 22);
-            this.tbAvgResultSelected.TabIndex = 19;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(302, 111);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 16);
-            this.label25.TabIndex = 22;
-            this.label25.Text = "AVERAGE:";
-            // 
-            // tbAvgHcSelected
-            // 
-            this.tbAvgHcSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbAvgHcSelected.Enabled = false;
-            this.tbAvgHcSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAvgHcSelected.Location = new System.Drawing.Point(384, 109);
-            this.tbAvgHcSelected.Name = "tbAvgHcSelected";
-            this.tbAvgHcSelected.Size = new System.Drawing.Size(137, 22);
-            this.tbAvgHcSelected.TabIndex = 21;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(83, 111);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 16);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "TOTAL:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(85, 77);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 16);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "TOTAL:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(85, 43);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 16);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "TOTAL:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(6, 109);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(42, 18);
-            this.label26.TabIndex = 21;
-            this.label26.Text = "H/C:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(6, 75);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(78, 18);
-            this.label27.TabIndex = 20;
-            this.label27.Text = "RESULT:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(6, 41);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(61, 18);
-            this.label28.TabIndex = 19;
-            this.label28.Text = "DROP:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(299, 111);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(76, 16);
-            this.label29.TabIndex = 30;
-            this.label29.Text = "AVERAGE:";
-            // 
-            // tbAvgHc
-            // 
-            this.tbAvgHc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbAvgHc.Enabled = false;
-            this.tbAvgHc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAvgHc.Location = new System.Drawing.Point(381, 109);
-            this.tbAvgHc.Name = "tbAvgHc";
-            this.tbAvgHc.Size = new System.Drawing.Size(137, 22);
-            this.tbAvgHc.TabIndex = 29;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(299, 77);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(76, 16);
-            this.label30.TabIndex = 28;
-            this.label30.Text = "AVERAGE:";
-            // 
-            // tbAvgResult
-            // 
-            this.tbAvgResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbAvgResult.Enabled = false;
-            this.tbAvgResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAvgResult.Location = new System.Drawing.Point(381, 75);
-            this.tbAvgResult.Name = "tbAvgResult";
-            this.tbAvgResult.Size = new System.Drawing.Size(137, 22);
-            this.tbAvgResult.TabIndex = 27;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(299, 43);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(76, 16);
-            this.label31.TabIndex = 26;
-            this.label31.Text = "AVERAGE:";
-            // 
-            // tbAvgDrop
-            // 
-            this.tbAvgDrop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbAvgDrop.Enabled = false;
-            this.tbAvgDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAvgDrop.Location = new System.Drawing.Point(381, 41);
-            this.tbAvgDrop.Name = "tbAvgDrop";
-            this.tbAvgDrop.Size = new System.Drawing.Size(137, 22);
-            this.tbAvgDrop.TabIndex = 25;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_left225;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(21, 472);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(252, 40);
-            this.button1.TabIndex = 59;
-            this.button1.Text = "Show Statistics";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(744, 518);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 23);
-            this.button2.TabIndex = 71;
-            this.button2.Text = "Show graph";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // frmStatistics
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -945,6 +952,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStatistics";
             this.Text = "Statistics";
             this.Load += new System.EventHandler(this.frmStatistics_Load);

@@ -112,50 +112,58 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="namespace-logo-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\namespace-logo-dark.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_round77" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\rsz_round77.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rsz_delete85" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\rsz_delete85.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rsz_left225" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\rsz_left225.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nmspc10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\nmspc10.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rsz_basic14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\rsz_basic14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_1basic16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\rsz_1basic16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rsz_round77" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\rsz_round77.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ascendant6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ascendant6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rsz_1zoom72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\rsz_1zoom72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rsz_eye106" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\rsz_eye106.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rsz_clasic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\rsz_clasic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="namespace-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\namespace-logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rsz_basic141" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\rsz_basic14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rsz_left225" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\rsz_left225.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="diskette31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diskette31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rsz_refresh62" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\images\rsz_refresh62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="rsz_1basic16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\images\rsz_1basic16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_basic141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\rsz_basic14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="namespace-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\namespace-logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rsz_clasic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\rsz_clasic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rsz_eye106" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\rsz_eye106.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rsz_basic14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\rsz_basic14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="namespace-logo-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\images\namespace-logo-dark.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

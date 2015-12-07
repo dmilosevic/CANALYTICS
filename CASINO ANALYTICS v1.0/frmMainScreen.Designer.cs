@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainScreen));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.lblCurrentTable = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnAllStats = new System.Windows.Forms.Button();
             this.tbTotalHeadcount = new System.Windows.Forms.TextBox();
             this.tbTotalResult = new System.Windows.Forms.TextBox();
             this.tbTotalDrop = new System.Windows.Forms.TextBox();
@@ -43,18 +46,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbTables = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnAllStats = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnDeleteCheck = new System.Windows.Forms.Button();
             this.btnEnterCheck = new System.Windows.Forms.Button();
+            this.lbTables = new System.Windows.Forms.ListBox();
             this.btnDeleteTable = new System.Windows.Forms.Button();
             this.btnEditTable = new System.Windows.Forms.Button();
             this.btnAddTable = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -81,6 +82,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Statistics";
             // 
+            // button4
+            // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_eye106;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(26, 258);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(309, 33);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "VIEW HOURLY STATS";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // lblCurrentTable
             // 
             this.lblCurrentTable.AutoSize = true;
@@ -100,6 +115,20 @@
             this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "TABLE:";
+            // 
+            // btnAllStats
+            // 
+            this.btnAllStats.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAllStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllStats.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_eye106;
+            this.btnAllStats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllStats.Location = new System.Drawing.Point(26, 219);
+            this.btnAllStats.Name = "btnAllStats";
+            this.btnAllStats.Size = new System.Drawing.Size(309, 33);
+            this.btnAllStats.TabIndex = 8;
+            this.btnAllStats.Text = "VIEW ALL STATS";
+            this.btnAllStats.UseVisualStyleBackColor = true;
+            this.btnAllStats.Click += new System.EventHandler(this.btnAllStats_Click);
             // 
             // tbTotalHeadcount
             // 
@@ -230,73 +259,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tables";
             // 
-            // lbTables
-            // 
-            this.lbTables.FormattingEnabled = true;
-            this.lbTables.ItemHeight = 15;
-            this.lbTables.Location = new System.Drawing.Point(17, 38);
-            this.lbTables.Name = "lbTables";
-            this.lbTables.Size = new System.Drawing.Size(195, 289);
-            this.lbTables.TabIndex = 3;
-            this.lbTables.SelectedIndexChanged += new System.EventHandler(this.lbTables_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(257, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(258, 29);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "CASINO ANALYTICS";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(80, 20);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(35, 15);
-            this.lblUser.TabIndex = 19;
-            this.lblUser.Text = "user";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 15);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Welcome ";
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_eye106;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(26, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(309, 33);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "VIEW HOURLY STATS";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnAllStats
-            // 
-            this.btnAllStats.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAllStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAllStats.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_eye106;
-            this.btnAllStats.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllStats.Location = new System.Drawing.Point(26, 219);
-            this.btnAllStats.Name = "btnAllStats";
-            this.btnAllStats.Size = new System.Drawing.Size(309, 33);
-            this.btnAllStats.TabIndex = 8;
-            this.btnAllStats.Text = "VIEW ALL STATS";
-            this.btnAllStats.UseVisualStyleBackColor = true;
-            this.btnAllStats.Click += new System.EventHandler(this.btnAllStats_Click);
-            // 
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -335,6 +297,16 @@
             this.btnEnterCheck.Text = "Enter Check";
             this.btnEnterCheck.UseVisualStyleBackColor = true;
             this.btnEnterCheck.Click += new System.EventHandler(this.btnEnterCheck_Click);
+            // 
+            // lbTables
+            // 
+            this.lbTables.FormattingEnabled = true;
+            this.lbTables.ItemHeight = 15;
+            this.lbTables.Location = new System.Drawing.Point(17, 38);
+            this.lbTables.Name = "lbTables";
+            this.lbTables.Size = new System.Drawing.Size(195, 289);
+            this.lbTables.TabIndex = 3;
+            this.lbTables.SelectedIndexChanged += new System.EventHandler(this.lbTables_SelectedIndexChanged);
             // 
             // btnDeleteTable
             // 
@@ -375,11 +347,40 @@
             this.btnAddTable.UseVisualStyleBackColor = true;
             this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(257, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(258, 29);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "CASINO ANALYTICS";
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(80, 20);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(35, 15);
+            this.lblUser.TabIndex = 19;
+            this.lblUser.Text = "user";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Welcome ";
+            // 
             // frmMainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 492);
+            this.ClientSize = new System.Drawing.Size(742, 490);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -387,7 +388,9 @@
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimumSize = new System.Drawing.Size(758, 499);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(758, 528);
+            this.MinimumSize = new System.Drawing.Size(758, 528);
             this.Name = "frmMainScreen";
             this.Text = "Main Screen";
             this.Activated += new System.EventHandler(this.frmMainScreen_Activated);
