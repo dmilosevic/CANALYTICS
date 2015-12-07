@@ -29,6 +29,7 @@ namespace CASINO_ANALYTICS_v1._0
 
         private void frmGraphStatistics_Load(object sender, EventArgs e)
         {
+            
             label2.Text = tableName;
             label4.Text = date;
             string[] splitedDate = date.Split('.');
