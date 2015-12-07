@@ -63,6 +63,26 @@ namespace CASINO_ANALYTICS_v1._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ascendant6 {
+            get {
+                object obj = ResourceManager.GetObject("ascendant6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap diskette31 {
+            get {
+                object obj = ResourceManager.GetObject("diskette31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap namespace_logo_dark {
             get {
                 object obj = ResourceManager.GetObject("namespace-logo-dark", resourceCulture);
@@ -86,6 +106,16 @@ namespace CASINO_ANALYTICS_v1._0.Properties {
         internal static System.Drawing.Bitmap nmspc10 {
             get {
                 object obj = ResourceManager.GetObject("nmspc10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paper6 {
+            get {
+                object obj = ResourceManager.GetObject("paper6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

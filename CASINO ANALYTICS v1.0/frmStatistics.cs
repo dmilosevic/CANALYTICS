@@ -23,6 +23,7 @@ namespace CASINO_ANALYTICS_v1._0
         List<Data> list; //holding all of the data form database table 'data'
         List<Data> results; //pretty straightforward xexe
         private string dmy;
+        private string dateToSendToChart;
         private List<Data> getStatsForYear(string table, int year) //UKUPNO I PROSECNO ZA TU GODINU
         {
             List<Data> ret = new List<Data>();
@@ -296,6 +297,7 @@ namespace CASINO_ANALYTICS_v1._0
 
                results = getStatsForYear(tbName,yearYear); //DONJI BOXOVI ZA GODINU
                dmy = "yearly";
+               dateToSendToChart = tbYearAnnual.Text;
             }
 
             else if (rbMonthly.Checked)
@@ -310,6 +312,7 @@ namespace CASINO_ANALYTICS_v1._0
 
                 results = getStatsForMonth(tbName, yearMonth, monthMonth); //DONJI BOXOVI ZA MESEC
                 dmy = "monthly";
+                dateToSendToChart = cbMonthMonthly.Text + "." + tbYearMonthly.Text;
             }
             else if (rbDaily.Checked)
             {
@@ -324,6 +327,7 @@ namespace CASINO_ANALYTICS_v1._0
 
                results = getStatsForDay(tbName, yearDay, monthDay, dayDay); //DONJI BOXOVI ZA DAN
                dmy = "daily";
+               dateToSendToChart = cbDayDaily.Text + "." + cbMonthDaily.Text + "." + tbYearDaily.Text;
             }
             #endregion
 
@@ -634,8 +638,42 @@ namespace CASINO_ANALYTICS_v1._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //frmGraphStatistics frmgraph = new frmGraphStatistics(lbTables.SelectedItem.ToString(),dmy,results);
-           // frmgraph.ShowDialog();
+            //just in case provere
+            if (rbDaily.Checked)
+            {
+                if (string.IsNullOrEmpty(cbDayDaily.Text) || string.IsNullOrEmpty(cbMonthDaily.Text) || string.IsNullOrEmpty(tbYearDaily.Text))
+                {
+                    MessageBox.Show("Please enter all the values needed to show the graph","Cannot show graph");
+                    return;
+                }
+            }
+
+            if (rbMonthly.Checked)
+            {
+                if (string.IsNullOrEmpty(cbMonthMonthly.Text) || string.IsNullOrEmpty(tbYearMonthly.Text))
+                {
+                    MessageBox.Show("Please enter all the values needed to show the graph", "Cannot show graph");
+                    return;
+                }
+            }
+
+            if (rbAnnual.Checked)
+            {
+                if (string.IsNullOrEmpty(tbYearAnnual.Text))
+                {
+                    MessageBox.Show("Please enter all the values needed to show the graph", "Cannot show graph");
+                    return;
+                }
+            }
+
+            if (dataGridView1.Rows.Count == 0)
+            {
+                MessageBox.Show("Cannot show graph for empty results","Cannot show graph");
+                return;
+            }
+
+            frmGraphStatistics frmgraph = new frmGraphStatistics(lbTables.SelectedItem.ToString(),dmy,results,dateToSendToChart);
+            frmgraph.ShowDialog();
         }
     }
 }

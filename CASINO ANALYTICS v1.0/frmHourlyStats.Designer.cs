@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHourlyStats));
             this.label1 = new System.Windows.Forms.Label();
             this.lbTables = new System.Windows.Forms.CheckedListBox();
             this.cbDay = new System.Windows.Forms.ComboBox();
@@ -149,6 +150,7 @@
             // 
             // btnCalculate
             // 
+            this.btnCalculate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCalculate.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_1basic16;
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalculate.Location = new System.Drawing.Point(9, 405);
@@ -329,10 +331,11 @@
             this.Controls.Add(this.lbTables);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(627, 488);
             this.MinimumSize = new System.Drawing.Size(627, 488);
             this.Name = "frmHourlyStats";
-            this.Text = "frmHourlyStats";
+            this.Text = "Hourly Stats";
             this.Load += new System.EventHandler(this.frmHourlyStats_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CASINO_ANALYTICS_v1._0
 {
-    class Data
+    public class Data
     {
         public string user;
         public string tableName;

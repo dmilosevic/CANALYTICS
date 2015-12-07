@@ -21,5 +21,10 @@ namespace CASINO_ANALYTICS_v1._0
         {
             Process.Start("http://www.thenamespace.com");
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/namespaceco/?fref=ts");
+        }
     }
 }

@@ -185,7 +185,7 @@ namespace CASINO_ANALYTICS_v1._0
         public List<Data> getAllData()
         {
             List<Data> ldata = new List<Data>();
-            string query = "SELECT * FROM data";
+            string query = "SELECT * FROM data ORDER BY Year, Month, Day, fromH";
             MySqlCommand cmd = new MySqlCommand(query, connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
