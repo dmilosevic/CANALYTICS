@@ -78,7 +78,6 @@ namespace CASINO_ANALYTICS_v1._0
                     DateTime dtFrom = new DateTime(d.year, d.month, d.day);
                     DateTime dtTo = new DateTime(d.year, d.month, d.day);
                     
-                    //int dayFromSplitted = Int32.Parse(splittedFromDate[1]);
 
                     if (DateTime.Compare(localFrom, dtFrom) <= 0 && DateTime.Compare(localTo, dtTo) >= 0)
                     {

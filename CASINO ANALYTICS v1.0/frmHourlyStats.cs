@@ -192,7 +192,7 @@ namespace CASINO_ANALYTICS_v1._0
             else
             {
                 frmGraphHourly frmgh = new frmGraphHourly(dataList,checkedTableArray,localFrom,localTo,cbDay.Text,tbFromH.Text,tbToH.Text);
-                frmgh.Show();
+                frmgh.ShowDialog();
             }
         }
     }

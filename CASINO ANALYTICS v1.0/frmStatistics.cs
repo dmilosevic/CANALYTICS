@@ -673,7 +673,7 @@ namespace CASINO_ANALYTICS_v1._0
             }
 
             frmGraphStatistics frmgraph = new frmGraphStatistics(lbTables.SelectedItem.ToString(),dmy,results,dateToSendToChart);
-            frmgraph.Show();
+            frmgraph.ShowDialog();
         }
     }
 }
