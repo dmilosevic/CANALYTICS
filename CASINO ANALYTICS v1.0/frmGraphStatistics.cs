@@ -75,7 +75,7 @@ namespace CASINO_ANALYTICS_v1._0
                         if (item.tableName == tableName && item.year == year)
                         {
                             this.chart1.Series["Drop"].Points.AddXY(item.month.ToString(), item.drop);
-                            this.chart1.Series["Drop"].Points.AddXY(item.month.ToString(), item.result);
+                            this.chart1.Series["Result"].Points.AddXY(item.month.ToString(), item.result);
                         }
                     }
                 }

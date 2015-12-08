@@ -37,7 +37,13 @@ namespace CASINO_ANALYTICS_v1._0
         private void button5_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
-            richTextBox1.Text = "For selected table in the list box you need to select the statistic view you want to see.\n\n If you want to see on daily level check daily, then enter values, same for the monthly and annual.\n\n Below the main data grid there are 3 boxes. The first box shows the entire drop/result/hc for the specific day /month/or year(it depends on what you selected) , the second shows the entire drop/result/hc for the specific table EVER. And the last shows the overall drop/result/hc for ALL tables. \n\n Save to txt option - saves file in a .txt for later use.";
+            richTextBox1.Text = "For selected table in the list box you need to select the statistic view you want to see.\n\n If you want to see on daily level check daily, then enter values, same for the monthly and annual.\n\n Below the main data grid there are 2 boxes. The first box shows the entire drop/result/hc for the specific day /month/or year(it depends on what you selected) , the second shows the entire drop/result/hc for the specific table EVER. \n\n Save to txt option - saves file in a .txt for later use. \n\n SHOW GRAPH Option - draws a graphical representation of drop and result rate";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "";
+            richTextBox1.Text = "For selected table, or group of tables, and for selected day, past time and hour span, show overall statistic of drop/result and headcounts. \n\n Also graphical interface is available";
         }
     }
 }
