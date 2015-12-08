@@ -53,6 +53,7 @@
             this.tbAvgResult = new System.Windows.Forms.TextBox();
             this.tbTotalHc = new System.Windows.Forms.TextBox();
             this.tbAvgHc = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -301,11 +302,25 @@
             this.tbAvgHc.Size = new System.Drawing.Size(135, 25);
             this.tbAvgHc.TabIndex = 24;
             // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.ascendant6;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(464, 405);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 31);
+            this.button2.TabIndex = 72;
+            this.button2.Text = "Show graph";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmHourlyStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.tbAvgHc);
             this.Controls.Add(this.tbTotalHc);
             this.Controls.Add(this.tbAvgResult);
@@ -368,5 +383,6 @@
         private System.Windows.Forms.TextBox tbAvgResult;
         private System.Windows.Forms.TextBox tbTotalHc;
         private System.Windows.Forms.TextBox tbAvgHc;
+        private System.Windows.Forms.Button button2;
     }
 }

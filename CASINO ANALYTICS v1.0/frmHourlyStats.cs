@@ -20,6 +20,7 @@ namespace CASINO_ANALYTICS_v1._0
         string[] tableArray;
         DateTime localFrom;
         DateTime localTo;
+        string[] checkedTableArray;
         private void frmHourlyStats_Load(object sender, EventArgs e)
         {
             DbConnect conn = new DbConnect();
@@ -114,12 +115,18 @@ namespace CASINO_ANALYTICS_v1._0
                 MessageBox.Show("Please enter all the values needed.","Information");
                 return;
             }
-            
+            int duzinaChekiranihStolova = 0;
             for(int i=0; i<lbTables.CheckedItems.Count; i++)
             {
                 tableArray[i] = lbTables.CheckedItems[i].ToString();
+                duzinaChekiranihStolova++;
             }
 
+            checkedTableArray = new string[duzinaChekiranihStolova];
+            for (int i = 0; i < duzinaChekiranihStolova; i++)
+            {
+                checkedTableArray[i] = tableArray[i];
+            }
             string day = cbDay.Text;
             string past = cbPast.Text;
             int from = int.Parse(tbFromH.Text);
@@ -173,6 +180,20 @@ namespace CASINO_ANALYTICS_v1._0
             tbAvgResult.Text = (totalResult / count).ToString();
             tbAvgHc.Text = (totalHc / count).ToString();
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tbTotalDrop.Text == "0")
+            {
+                MessageBox.Show("Cannot show graph for empty results, please fill in all the fields and try again.","Cannot show graph");
+                return;
+            }
+            else
+            {
+                frmGraphHourly frmgh = new frmGraphHourly(dataList,checkedTableArray,localFrom,localTo,cbDay.Text);
+                frmgh.Show();
+            }
         }
     }
 }

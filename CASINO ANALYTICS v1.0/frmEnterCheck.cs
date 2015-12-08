@@ -58,16 +58,25 @@ namespace CASINO_ANALYTICS_v1._0
             int month = monthCalendar1.SelectionStart.Month;
             int day = monthCalendar1.SelectionStart.Day;
 
-            Data newData = new Data(user, tableName, year, month, day, int.Parse(tbFrom.Text), int.Parse(tbTo.Text),
-                                double.Parse(tbDrop.Text), double.Parse(tbResult.Text), int.Parse(tbHeadcount.Text));
+            try {
+                Data newData = new Data(user, tableName, year, month, day, int.Parse(tbFrom.Text), int.Parse(tbTo.Text),
+                                    double.Parse(tbDrop.Text), double.Parse(tbResult.Text), int.Parse(tbHeadcount.Text));
 
-            DbConnect conn = new DbConnect();
-            conn.openConnection();
-            conn.addNewData(newData);
-            conn.closeConnection();
+                DbConnect conn = new DbConnect();
+                conn.openConnection();
+                conn.addNewData(newData);
+                conn.closeConnection();
 
-            MessageBox.Show("Successfully added!");
-            this.Close();
+                MessageBox.Show("Successfully added!");
+                this.Close();
+            }          
+
+            
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }
