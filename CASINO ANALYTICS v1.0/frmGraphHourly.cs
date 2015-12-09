@@ -64,6 +64,7 @@ namespace CASINO_ANALYTICS_v1._0
 
             this.chart1.Series["Drop"].BorderWidth = 3;
             this.chart1.Series["Result"].BorderWidth = 3;
+            this.chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Enabled = false;
 
             foreach (Data d in dataList)
             {
