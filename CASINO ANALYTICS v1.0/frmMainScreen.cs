@@ -74,7 +74,7 @@ namespace CASINO_ANALYTICS_v1._0
                 MessageBox.Show("You must select table to add check", "Please select table");
                 return;
             }
-            frmEnterCheck enter = new frmEnterCheck(lbTables.SelectedItem.ToString(), lblUser.Text);
+            frmEnterCheck enter = new frmEnterCheck(lblUser.Text);
             enter.ShowDialog();
         }
 
