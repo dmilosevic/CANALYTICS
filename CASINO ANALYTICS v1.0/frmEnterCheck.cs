@@ -72,6 +72,7 @@ namespace CASINO_ANALYTICS_v1._0
             int year = monthCalendar1.SelectionStart.Year;
             int month = monthCalendar1.SelectionStart.Month;
             int day = monthCalendar1.SelectionStart.Day;
+            tableName = lbTables.SelectedItem.ToString();
 
             try {
                 Data newData = new Data(user, tableName, year, month, day, int.Parse(tbFrom.Text), int.Parse(tbTo.Text),
@@ -83,7 +84,6 @@ namespace CASINO_ANALYTICS_v1._0
                 conn.closeConnection();
 
                 MessageBox.Show("Successfully added!");
-                this.Close();
             }          
 
             
@@ -97,7 +97,7 @@ namespace CASINO_ANALYTICS_v1._0
 
         private void frmEnterCheck_Load(object sender, EventArgs e)
         {
-
+            loadTables();
         }
     }
 }

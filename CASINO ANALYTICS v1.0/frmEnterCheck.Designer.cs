@@ -229,11 +229,12 @@
             // 
             // lbTables
             // 
+            this.lbTables.Font = new System.Drawing.Font("Droid Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTables.FormattingEnabled = true;
-            this.lbTables.ItemHeight = 14;
+            this.lbTables.ItemHeight = 15;
             this.lbTables.Location = new System.Drawing.Point(28, 114);
             this.lbTables.Name = "lbTables";
-            this.lbTables.Size = new System.Drawing.Size(215, 326);
+            this.lbTables.Size = new System.Drawing.Size(215, 319);
             this.lbTables.TabIndex = 19;
             // 
             // label12
