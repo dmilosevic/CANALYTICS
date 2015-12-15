@@ -18,12 +18,27 @@ namespace CASINO_ANALYTICS_v1._0
         private string tableName;
         private string user;
 
-        public frmEnterCheck(string table, string user)
+        public frmEnterCheck(string user)
         {
             InitializeComponent();
-            this.tableName = table;
             this.user = user;
-            lblTableName.Text = table;
+        }
+
+        public void loadTables()
+        {
+            DbConnect conn = new DbConnect();
+            List<Table> listaStolova = new List<Table>();
+
+            conn.openConnection();
+            listaStolova = conn.selectTables();
+            lbTables.Items.Clear();
+
+            foreach (Table item in listaStolova)
+            {
+                lbTables.Items.Add(item.getTableName());
+            }
+
+            conn.closeConnection();
         }
 
         public bool checkValues()
@@ -77,6 +92,11 @@ namespace CASINO_ANALYTICS_v1._0
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void frmEnterCheck_Load(object sender, EventArgs e)
+        {
 
         }
     }
