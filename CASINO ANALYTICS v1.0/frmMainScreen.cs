@@ -69,11 +69,6 @@ namespace CASINO_ANALYTICS_v1._0
 
         private void btnEnterCheck_Click(object sender, EventArgs e)
         {
-            if (lbTables.SelectedIndex < 0)
-            {
-                MessageBox.Show("You must select table to add check", "Please select table");
-                return;
-            }
             frmEnterCheck enter = new frmEnterCheck(lblUser.Text);
             enter.ShowDialog();
         }
