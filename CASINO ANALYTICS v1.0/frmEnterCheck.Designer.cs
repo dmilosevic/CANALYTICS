@@ -48,8 +48,8 @@
             this.btnFinish = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lblTableName = new System.Windows.Forms.Label();
-            this.lbTables = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.lbTables = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -227,16 +227,6 @@
             this.lblTableName.TabIndex = 18;
             this.lblTableName.Text = "TableName";
             // 
-            // lbTables
-            // 
-            this.lbTables.Font = new System.Drawing.Font("Droid Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTables.FormattingEnabled = true;
-            this.lbTables.ItemHeight = 15;
-            this.lbTables.Location = new System.Drawing.Point(28, 114);
-            this.lbTables.Name = "lbTables";
-            this.lbTables.Size = new System.Drawing.Size(215, 319);
-            this.lbTables.TabIndex = 19;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -247,13 +237,22 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "Tables";
             // 
+            // lbTables
+            // 
+            this.lbTables.Font = new System.Drawing.Font("Droid Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTables.FormattingEnabled = true;
+            this.lbTables.Location = new System.Drawing.Point(12, 114);
+            this.lbTables.Name = "lbTables";
+            this.lbTables.Size = new System.Drawing.Size(242, 310);
+            this.lbTables.TabIndex = 21;
+            // 
             // frmEnterCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 503);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.lbTables);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.lblTableName);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnFinish);
@@ -304,7 +303,7 @@
         private System.Windows.Forms.Button btnFinish;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblTableName;
-        private System.Windows.Forms.ListBox lbTables;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckedListBox lbTables;
     }
 }

@@ -16,12 +16,25 @@ namespace CASINO_ANALYTICS_v1._0
             InitializeComponent();
         }
         private string tableName;
+        private string[] checkedTableArray;
         private string user;
 
         public frmEnterCheck(string user)
         {
             InitializeComponent();
             this.user = user;
+        }
+        public void nullAllFields()
+        {
+            tbDrop.Clear();
+            tbFrom.Clear();
+            tbHeadcount.Clear();
+            tbResult.Clear();
+            tbTo.Clear();
+            foreach (int i in lbTables.CheckedIndices)
+            {
+                lbTables.SetItemCheckState(i, CheckState.Unchecked);
+            }
         }
 
         public void loadTables()
@@ -72,26 +85,31 @@ namespace CASINO_ANALYTICS_v1._0
             int year = monthCalendar1.SelectionStart.Year;
             int month = monthCalendar1.SelectionStart.Month;
             int day = monthCalendar1.SelectionStart.Day;
-            tableName = lbTables.SelectedItem.ToString();
-
-            try {
-                Data newData = new Data(user, tableName, year, month, day, int.Parse(tbFrom.Text), int.Parse(tbTo.Text),
-                                    double.Parse(tbDrop.Text), double.Parse(tbResult.Text), int.Parse(tbHeadcount.Text));
-
-                DbConnect conn = new DbConnect();
-                conn.openConnection();
-                conn.addNewData(newData);
-                conn.closeConnection();
-
-                MessageBox.Show("Successfully added!");
-            }          
-
-            
-
-            catch (Exception ex)
+            checkedTableArray = new string[lbTables.CheckedItems.Count];
+            for (int i = 0; i < lbTables.CheckedItems.Count; i++)
             {
-                MessageBox.Show(ex.Message);
+                checkedTableArray[i] = lbTables.CheckedItems[i].ToString();
             }
+            DbConnect conn = new DbConnect();
+            conn.openConnection();
+            for (int i = 0; i < checkedTableArray.Length; i++)
+            {
+                tableName = checkedTableArray[i];
+                try {
+                    Data newData = new Data(user, tableName, year, month, day, int.Parse(tbFrom.Text), int.Parse(tbTo.Text),
+                                        double.Parse(tbDrop.Text), double.Parse(tbResult.Text), int.Parse(tbHeadcount.Text));
+
+                    conn.addNewData(newData);
+                }        
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            MessageBox.Show("Successfully added!");
+            conn.closeConnection();
+            nullAllFields();
 
         }
 
