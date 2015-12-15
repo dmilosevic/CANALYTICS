@@ -30,6 +30,9 @@ namespace CASINO_ANALYTICS_v1._0
 
         public void showTodayStatsForThisTable(string selectedTable) //ovde u listbox selectovanju proslediti ime stola
         {
+            tbTotalDrop.Text = "0";
+            tbTotalHeadcount.Text = "0";
+            tbTotalResult.Text = "0";
             DbConnect conn = new DbConnect();
             List<Data> dataList = new List<Data>();
 
@@ -39,17 +42,18 @@ namespace CASINO_ANALYTICS_v1._0
             mesec = DateTime.Today.Month;
             godina = DateTime.Today.Year;
             dataList = conn.getData(selectedTable,dan,mesec,godina);
-            double ukupanDrop=0, ukupanResult=0;
-            int ukupanHC=0;
+            if (dataList.Count == 0)
+                return;
+            Data newest = dataList[0];
+
             foreach (Data item in dataList)
             {
-                ukupanDrop += item.drop;
-                ukupanResult += item.result;
-                ukupanHC += item.headcount;
+                if (DbConnect.compareTime(item.fromH, newest.fromH) == 1)
+                    newest = item;
             }
-            tbTotalDrop.Text = ukupanDrop.ToString();
-            tbTotalResult.Text = ukupanResult.ToString();
-            tbTotalHeadcount.Text = ukupanHC.ToString();
+            tbTotalDrop.Text = newest.drop.ToString();
+            tbTotalResult.Text = newest.result.ToString();
+            tbTotalHeadcount.Text = newest.headcount.ToString();
 
 
             conn.closeConnection();
