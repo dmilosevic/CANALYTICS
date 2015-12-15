@@ -74,6 +74,24 @@ namespace CASINO_ANALYTICS_v1._0
         }
         //---------------USERS----------------
 
+        public static int compareTime(int first, int second)
+        {
+            int[] val = { 0, 1, 2, 3, 4, 5, 6, 7, 8 };
+            int[] ten = { 18, 19, 20, 21, 22, 23 };
+
+            if (val.Contains(first) && ten.Contains(second))
+                return 1;
+
+            if (val.Contains(second) && ten.Contains(first))
+                return -1;
+
+            if (first == second) return 0;
+
+            if (first < second) return -1;
+            if (second < first) return 1;
+
+            return 404;
+        }
         public List<User> selectUsers()
         {
             List<User> ls = new List<User>();
