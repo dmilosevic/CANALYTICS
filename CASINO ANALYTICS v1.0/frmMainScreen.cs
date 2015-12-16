@@ -173,7 +173,8 @@ namespace CASINO_ANALYTICS_v1._0
 
         private void btnAttendance_Click(object sender, EventArgs e)
         {
-
+            frmAttendancePanel fap = new frmAttendancePanel();
+            fap.Show();
         }
 
     }
