@@ -134,12 +134,17 @@ namespace CASINO_ANALYTICS_v1._0
 
             setTimeSpan(from, to); //important
 
+            double dropBegin=0, dropEnd=0;
+            double resultBegin = 0, resultEnd = 0;
+            int hcBegin = 0, hcEnd = 0;
             int count = 0;
             double totalDrop = 0;
             double totalResult = 0;
             int totalHc = 0;
-            foreach(Data d in dataList)
+            for (int i = 0; i < dataList.Count; i++)
             {
+                Data d = (Data)dataList[i];
+                
                 if (tableArray.Contains(d.tableName))
                 {
                     if(day != "All days")
@@ -154,16 +159,29 @@ namespace CASINO_ANALYTICS_v1._0
                     if (DateTime.Compare(localFrom, dtFrom) <= 0 && DateTime.Compare(localTo, dtTo) >= 0)
                     {
                         //correct date, check time
-                        if (compareTime(d.fromH, from) >= 0 && compareTime(d.toH, to) <= 0)
-                        {
-                            totalDrop += d.drop;
-                            totalResult += d.result;
-                            totalHc += d.headcount;
-                            count++;
+                        if (d.toH == from)
+                        {   
+                            dropBegin += d.drop;
+                            resultBegin += d.result;
+                            hcBegin += d.headcount;
                         }
+                        if (d.toH == to)
+                        {
+                            dropEnd += d.drop;
+                            resultEnd += d.result;
+                            hcEnd += d.headcount;
+                        }
+
+                        
+                            //totalResult += d.result;
+                            //totalHc += d.headcount;
+                            //count++;
                     }
                 }
             }
+            totalDrop = Math.Max(dropEnd, dropBegin) - Math.Min(dropEnd, dropBegin);
+            totalResult = Math.Max(resultBegin, resultEnd) - Math.Min(resultEnd, resultBegin);
+            totalHc = Math.Max(hcBegin, hcEnd) - Math.Min(hcBegin, hcEnd);
             tbTotalDrop.Text = totalDrop.ToString();
             tbTotalResult.Text = totalResult.ToString();
             tbTotalHc.Text = totalHc.ToString();
@@ -182,6 +200,10 @@ namespace CASINO_ANALYTICS_v1._0
             
         }
 
+        private void populateArray()
+        {
+
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             if (tbTotalDrop.Text == "0")
