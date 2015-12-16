@@ -46,8 +46,6 @@
             this.tbHeadcount = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnFinish = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblTableName = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbTables = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
@@ -207,26 +205,6 @@
             this.btnFinish.UseVisualStyleBackColor = true;
             this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Droid Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(149, 50);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(156, 19);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Applying values to:";
-            // 
-            // lblTableName
-            // 
-            this.lblTableName.AutoSize = true;
-            this.lblTableName.Font = new System.Drawing.Font("Droid Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableName.Location = new System.Drawing.Point(324, 50);
-            this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(96, 19);
-            this.lblTableName.TabIndex = 18;
-            this.lblTableName.Text = "TableName";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -253,8 +231,6 @@
             this.ClientSize = new System.Drawing.Size(587, 503);
             this.Controls.Add(this.lbTables);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.lblTableName);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.tbHeadcount);
             this.Controls.Add(this.label10);
@@ -301,8 +277,6 @@
         private System.Windows.Forms.TextBox tbHeadcount;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnFinish;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lblTableName;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.CheckedListBox lbTables;
     }

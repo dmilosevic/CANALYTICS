@@ -67,7 +67,7 @@ namespace CASINO_ANALYTICS_v1._0
                 
                 return false;
             }
-            if (tbDrop.Text == "" || tbHeadcount.Text == "" || tbTo.Text == "" || tbFrom.Text == "" || tbResult.Text == "" || monthCalendar1.SelectionRange.Start.ToShortDateString() == null)
+            if (tbDrop.Text == "" || tbHeadcount.Text == "" || tbTo.Text == "" || tbFrom.Text == "" || tbResult.Text == "" || monthCalendar1.SelectionRange.Start.ToShortDateString() == null || lbTables.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please enter all values and pick a date", "Invalid entry");
                 return false;
