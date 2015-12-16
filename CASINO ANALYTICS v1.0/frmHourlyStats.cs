@@ -164,12 +164,14 @@ namespace CASINO_ANALYTICS_v1._0
                             dropBegin += d.drop;
                             resultBegin += d.result;
                             hcBegin += d.headcount;
+                            count++;
                         }
                         if (d.toH == to)
                         {
                             dropEnd += d.drop;
                             resultEnd += d.result;
                             hcEnd += d.headcount;
+                            count++;
                         }
 
                         
