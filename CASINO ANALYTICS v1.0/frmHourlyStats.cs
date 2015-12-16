@@ -179,9 +179,9 @@ namespace CASINO_ANALYTICS_v1._0
                     }
                 }
             }
-            totalDrop = Math.Max(dropEnd, dropBegin) - Math.Min(dropEnd, dropBegin);
-            totalResult = Math.Max(resultBegin, resultEnd) - Math.Min(resultEnd, resultBegin);
-            totalHc = Math.Max(hcBegin, hcEnd) - Math.Min(hcBegin, hcEnd);
+            totalDrop = dropEnd - dropBegin;
+            totalResult = resultEnd - resultBegin;
+            totalHc = hcEnd - hcBegin;
             tbTotalDrop.Text = totalDrop.ToString();
             tbTotalResult.Text = totalResult.ToString();
             tbTotalHc.Text = totalHc.ToString();
