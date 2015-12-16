@@ -171,5 +171,10 @@ namespace CASINO_ANALYTICS_v1._0
             fha.ShowDialog();
         }
 
+        private void btnAttendance_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

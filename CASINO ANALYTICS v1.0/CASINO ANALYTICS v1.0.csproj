@@ -69,6 +69,18 @@
     <Compile Include="frmAddTable.Designer.cs">
       <DependentUpon>frmAddTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttendance.Designer.cs">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttendancePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttendancePanel.Designer.cs">
+      <DependentUpon>frmAttendancePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDeleteCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddTable.resx">
       <DependentUpon>frmAddTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendance.resx">
+      <DependentUpon>frmAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendancePanel.resx">
+      <DependentUpon>frmAttendancePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeleteCheck.resx">
       <DependentUpon>frmDeleteCheck.cs</DependentUpon>
