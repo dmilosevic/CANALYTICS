@@ -35,6 +35,8 @@ namespace CASINO_ANALYTICS_v1._0
                 string[] splitedDate = date.Split('.');
                 this.chart1.Series["Drop"].BorderWidth = 3;
                 this.chart1.Series["Result"].BorderWidth = 3;
+                chart1.ChartAreas["ChartArea1"].AxisY.Maximum = double.NaN;
+                chart1.ChartAreas["ChartArea1"].AxisY.Minimum = double.NaN;
                 if (dmy =="daily")
                 {
                     day =Int32.Parse(splitedDate[0]);

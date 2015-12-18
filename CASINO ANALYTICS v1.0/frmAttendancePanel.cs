@@ -77,6 +77,13 @@ namespace CASINO_ANALYTICS_v1._0
             conn.openConnection();
             attendanceList = conn.getAllAttendances();
             conn.closeConnection();
+
+            DataGridViewColumn c0 = dataGridView1.Columns[0];
+            DataGridViewColumn c1 = dataGridView1.Columns[1];
+            DataGridViewColumn c2 = dataGridView1.Columns[2];
+            DataGridViewColumn c3 = dataGridView1.Columns[3];
+
+            c0.Width = c1.Width = c2.Width = c3.Width = 122;
         }
 
         private void rbDaily_CheckedChanged(object sender, EventArgs e)
@@ -145,6 +152,7 @@ namespace CASINO_ANALYTICS_v1._0
             }
 
             dataGridView1.Rows.Clear();
+
 
             foreach (Attendance att in specificQueryAttendanceList)
             {

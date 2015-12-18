@@ -65,6 +65,8 @@ namespace CASINO_ANALYTICS_v1._0
             this.chart1.Series["Drop"].BorderWidth = 3;
             this.chart1.Series["Result"].BorderWidth = 3;
             this.chart1.ChartAreas["ChartArea1"].AxisX.LabelStyle.Enabled = false;
+            chart1.ChartAreas["ChartArea1"].AxisY.Maximum = double.NaN;
+            chart1.ChartAreas["ChartArea1"].AxisY.Minimum = double.NaN;
 
             foreach (Data d in dataList)
             {

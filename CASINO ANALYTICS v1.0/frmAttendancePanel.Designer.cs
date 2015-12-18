@@ -48,14 +48,26 @@
             this.rbDaily = new System.Windows.Forms.RadioButton();
             this.btnAddAttendance = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Month = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Attendance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Year,
+            this.Month,
+            this.Day,
+            this.Attendance});
             this.dataGridView1.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(532, 373);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -288,6 +300,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Year
+            // 
+            this.Year.HeaderText = "Year";
+            this.Year.Name = "Year";
+            // 
+            // Month
+            // 
+            this.Month.HeaderText = "Month";
+            this.Month.Name = "Month";
+            // 
+            // Day
+            // 
+            this.Day.HeaderText = "Day";
+            this.Day.Name = "Day";
+            // 
+            // Attendance
+            // 
+            this.Attendance.HeaderText = "Attendance";
+            this.Attendance.Name = "Attendance";
+            // 
             // frmAttendancePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -344,5 +376,9 @@
         private System.Windows.Forms.RadioButton rbMonthly;
         private System.Windows.Forms.RadioButton rbDaily;
         private System.Windows.Forms.Button btnAddAttendance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Year;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Month;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Day;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Attendance;
     }
 }
