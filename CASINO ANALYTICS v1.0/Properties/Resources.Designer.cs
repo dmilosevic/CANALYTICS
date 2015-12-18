@@ -83,6 +83,16 @@ namespace CASINO_ANALYTICS_v1._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multiple25 {
+            get {
+                object obj = ResourceManager.GetObject("multiple25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap namespace_logo_dark {
             get {
                 object obj = ResourceManager.GetObject("namespace-logo-dark", resourceCulture);

@@ -46,6 +46,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAttendance = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnDeleteCheck = new System.Windows.Forms.Button();
             this.btnEnterCheck = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAttendance = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -261,6 +261,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tables";
             // 
+            // btnAttendance
+            // 
+            this.btnAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAttendance.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.multiple25;
+            this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttendance.Location = new System.Drawing.Point(218, 208);
+            this.btnAttendance.Name = "btnAttendance";
+            this.btnAttendance.Size = new System.Drawing.Size(120, 28);
+            this.btnAttendance.TabIndex = 11;
+            this.btnAttendance.Text = "Attendance";
+            this.btnAttendance.UseVisualStyleBackColor = true;
+            this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
+            // 
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -377,19 +390,6 @@
             this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 18;
             this.label1.Text = "Welcome ";
-            // 
-            // btnAttendance
-            // 
-            this.btnAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAttendance.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_round77;
-            this.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAttendance.Location = new System.Drawing.Point(218, 208);
-            this.btnAttendance.Name = "btnAttendance";
-            this.btnAttendance.Size = new System.Drawing.Size(120, 28);
-            this.btnAttendance.TabIndex = 11;
-            this.btnAttendance.Text = "Attendance";
-            this.btnAttendance.UseVisualStyleBackColor = true;
-            this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             // 
             // frmMainScreen
             // 

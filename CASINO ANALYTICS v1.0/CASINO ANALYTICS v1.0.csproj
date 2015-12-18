@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attendance.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="DbConnect.cs" />
     <Compile Include="Form1.cs">
@@ -260,6 +261,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Poker-icon.ico" />
+    <None Include="Resources\multiple25.png" />
     <Content Include="rsz_1canalytics_chip.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

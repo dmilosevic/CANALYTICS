@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAttendancePanel));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tbYearAnnual = new System.Windows.Forms.TextBox();
             this.tbYearMonthly = new System.Windows.Forms.TextBox();
             this.tbYearDaily = new System.Windows.Forms.TextBox();
@@ -47,6 +47,7 @@
             this.rbMonthly = new System.Windows.Forms.RadioButton();
             this.rbDaily = new System.Windows.Forms.RadioButton();
             this.btnAddAttendance = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,18 +68,6 @@
             this.label1.Size = new System.Drawing.Size(299, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "ATTENDANCE PANEL STATISTICS";
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_left225;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(292, 424);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(252, 40);
-            this.button1.TabIndex = 75;
-            this.button1.Text = "Show Statistics";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // tbYearAnnual
             // 
@@ -247,6 +236,7 @@
             this.rbAnnual.TabStop = true;
             this.rbAnnual.Text = "Annual";
             this.rbAnnual.UseVisualStyleBackColor = true;
+            this.rbAnnual.CheckedChanged += new System.EventHandler(this.rbAnnual_CheckedChanged);
             // 
             // rbMonthly
             // 
@@ -258,6 +248,7 @@
             this.rbMonthly.TabStop = true;
             this.rbMonthly.Text = "Monthly";
             this.rbMonthly.UseVisualStyleBackColor = true;
+            this.rbMonthly.CheckedChanged += new System.EventHandler(this.rbMonthly_CheckedChanged);
             // 
             // rbDaily
             // 
@@ -269,6 +260,7 @@
             this.rbDaily.TabStop = true;
             this.rbDaily.Text = "Daily";
             this.rbDaily.UseVisualStyleBackColor = true;
+            this.rbDaily.CheckedChanged += new System.EventHandler(this.rbDaily_CheckedChanged);
             // 
             // btnAddAttendance
             // 
@@ -282,6 +274,19 @@
             this.btnAddAttendance.Text = "Add Attendance";
             this.btnAddAttendance.UseVisualStyleBackColor = true;
             this.btnAddAttendance.Click += new System.EventHandler(this.btnAddAttendance_Click);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Image = global::CASINO_ANALYTICS_v1._0.Properties.Resources.rsz_left225;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(292, 424);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(252, 40);
+            this.button1.TabIndex = 75;
+            this.button1.Text = "Show Statistics";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmAttendancePanel
             // 
@@ -308,8 +313,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Droid Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAttendancePanel";
             this.Text = "frmAttendancePanel";
+            this.Load += new System.EventHandler(this.frmAttendancePanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

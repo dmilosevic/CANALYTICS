@@ -251,6 +251,35 @@ namespace CASINO_ANALYTICS_v1._0
             MySqlCommand cmd = new MySqlCommand(query, connection);
             cmd.ExecuteNonQuery();
         }
+
+        public void addNewAttendance(Attendance at)
+        {
+            string query = string.Format("INSERT INTO attendance (Year,Month,Day,Attendance) VALUES('{0}','{1}','{2}','{3}')",at.Year,at.Month,at.Day,at.Attendace);
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+        }
+
+        public List<Attendance> getAllAttendances()
+        {
+            List<Attendance> latt = new List<Attendance>();
+            string query = "SELECT * FROM attendance ORDER BY Year, Month, Day";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                int year = Int32.Parse(dataReader["Year"].ToString());
+                int month = Int32.Parse(dataReader["Month"].ToString());
+                int day = Int32.Parse(dataReader["Day"].ToString());
+                int attendance = Int32.Parse(dataReader["Attendance"].ToString());
+                Attendance newAtt = new Attendance(year,month,day,attendance);
+                latt.Add(newAtt);
+            }
+            dataReader.Close();
+            return latt;
+        }
+
         
         /// <summary>
         /// Checks whether table name is already in use
