@@ -173,3 +173,6 @@ C:\Users\Ognjen\Desktop\CASINONAGITU\CASINO ANALYTICS v1.0\obj\Debug\CASINO ANAL
 C:\Users\dmilosevic\Source\Repos\CASINO\CASINO ANALYTICS v1.0\bin\Debug\CASINO ANALYTICS v1.0.exe.config
 C:\Users\dmilosevic\Source\Repos\CASINO\CASINO ANALYTICS v1.0\obj\Debug\CASINO ANALYTICS v1.0.exe
 C:\Users\dmilosevic\Source\Repos\CASINO\CASINO ANALYTICS v1.0\obj\Debug\CASINO ANALYTICS v1.0.pdb
+C:\Users\Ognjen\Desktop\CANALYTICS\CASINO ANALYTICS v1.0\bin\Debug\CASINO ANALYTICS v1.0.exe.config
+C:\Users\Ognjen\Desktop\CANALYTICS\CASINO ANALYTICS v1.0\obj\Debug\CASINO ANALYTICS v1.0.exe
+C:\Users\Ognjen\Desktop\CANALYTICS\CASINO ANALYTICS v1.0\obj\Debug\CASINO ANALYTICS v1.0.pdb
