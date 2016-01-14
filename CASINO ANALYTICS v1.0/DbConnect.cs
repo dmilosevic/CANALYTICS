@@ -26,10 +26,10 @@ namespace CASINO_ANALYTICS_v1._0
 
         private void Initialize()
         {
-            server = "thenamespace.com";
-            database = "thenames_dbCasino";
-            username = "thenames_root";
-            password = "Jacoby10";
+            server = "";
+            database = "";
+            username = "";
+            password = "";
             connectionString = "SERVER=" + server + "; DATABASE=" + database +
                                 "; UID=" + username + "; PASSWORD=" + password + ";";
 
